@@ -2,12 +2,17 @@
 
 namespace App\UI\Entity;
 
+use App\Market\Product\Domain\Amount;
+use App\Market\Product\Domain\Currency;
+use App\Market\Product\Domain\ProductDescription;
+use App\Market\Product\Domain\ProductName;
 use App\UI\Entity\Traits\TimestampTrait;
 use App\UI\Repository\ProductRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass=ProductRepository::class)
+ * @ORM\HasLifecycleCallbacks()
  */
 class Product
 {
@@ -45,6 +50,16 @@ class Product
      * @ORM\JoinColumn(nullable=false)
      */
     private $category;
+
+    public static function create(ProductName $name, ProductDescription $description, Amount $amount, Currency $currency, Category $category): self
+    {
+        return (new self())
+            ->setName($name)
+            ->setDescription($description)
+            ->setAmount($amount->value())
+            ->setCurrency($currency->value())
+            ->setCategory($category);
+    }
 
     public function getId(): ?int
     {
