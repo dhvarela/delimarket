@@ -125,4 +125,11 @@ class Product
 
         return $this;
     }
+
+    public function getCategoryName(): ?string
+    {
+        $category = $this->getCategory();
+
+        return $category ? $category->getName() : null;
+    }
 }

@@ -8,7 +8,7 @@ abstract class DomainError extends DomainException
 {
     private $internalErrorCode;
 
-    public function __construct(string $message, string $internalErrorCode = '')
+    public function __construct(string $message, string $internalErrorCode = InternalErrorCodes::INVALID_ARGUMENT)
     {
         $this->internalErrorCode = $internalErrorCode;
         parent::__construct($message);
