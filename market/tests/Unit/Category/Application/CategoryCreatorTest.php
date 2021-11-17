@@ -6,7 +6,6 @@ use App\Market\Category\Application\CategoryCreateRequest;
 use App\Market\Category\Application\CategoryCreator;
 use App\Market\Category\Domain\CategoryName;
 use App\Market\Category\Domain\CategoryRepository;
-use App\Market\Shared\Domain\Exception\DomainInvalidArgument;
 use App\UI\Entity\Category;
 use Faker\Factory;
 use Mockery;

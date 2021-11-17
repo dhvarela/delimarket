@@ -62,6 +62,11 @@ class Category
         return $this;
     }
 
+    public function rename(CategoryName $newName): void
+    {
+        $this->name = $newName->value();
+    }
+
     /**
      * @return Collection|Product[]
      */
