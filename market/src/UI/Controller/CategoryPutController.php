@@ -6,8 +6,7 @@ use App\Market\Category\Application\CategoryUpdater;
 use App\Market\Category\Application\CategoryUpdateRequest;
 use App\Market\Category\Domain\CategoryId;
 use App\Market\Category\Domain\CategoryName;
-use App\Market\Shared\Infrastructure\Response\ApiHttpCreatedResponse;
-use App\Market\Shared\Infrastructure\Response\ApiHttpOkResponse;
+use App\Market\Shared\Infrastructure\Response\ApiHttpNoContentResponse;
 use App\Market\Shared\Infrastructure\Service\EnsureBodyRequestIsAValidJson;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -30,7 +29,7 @@ class CategoryPutController extends AbstractController
             )
         );
 
-        $response = new ApiHttpOkResponse();
+        $response = new ApiHttpNoContentResponse();
 
         return new JsonResponse($response->data(), $response->statusCode(), $response->headers());
     }

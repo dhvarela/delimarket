@@ -27,3 +27,8 @@ services:
     App\UI\Controller\:
         resource: '../src/UI/Controller'
         tags: ['controller.service_arguments']
+
+    App\UI\EventListener\ExceptionListener:
+        arguments: [ '%env(APP_ENV)%' ]
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception }
