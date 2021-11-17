@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+
+  web:
+    container_name: market
+    build: ${PWD}/docker-image/.
+    image: market
+    volumes:
+      - ${PWD}/../market:/var/www/market
+      - ${PWD}/docker-container-config-files/sites/market.com:/etc/nginx/sites-enabled/market.com
+      - ${PWD}/docker-container-config-files/xdebug/xdebug.ini:/etc/php/7.2/mods-available/xdebug.ini
+    networks:
+      market_subnet:
+        ipv4_address: ${MARKET_CONTAINER_IP}
+    extra_hosts:
+      - ${MARKET_DOMAIN}:127.0.0.1
+
+  mysql:
+    container_name: market-mysql-server
+    image: mysql:5.7
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MARKET_MYSQL_ROOT_PASSWORD}
+    networks:
+      market_subnet:
+        ipv4_address: ${MYSQL_CONTAINER_IP}
+
+networks:
+  market_subnet:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: ${MARKET_SUBNET}

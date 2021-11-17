@@ -1,0 +1,4 @@
+docker-container-config-files/sites/market.com
+docker-container-config-files/xdebug/xdebug.ini
+../.idea/
+.env
