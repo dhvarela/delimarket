@@ -2,10 +2,10 @@
 
 namespace App\Market\Category\Application;
 
+use App\Market\Category\Domain\Category;
 use App\Market\Category\Domain\CategoryId;
 use App\Market\Category\Domain\CategoryNotFound;
 use App\Market\Category\Domain\CategoryRepository;
-use App\UI\Entity\Category;
 
 class CategoryFinder
 {

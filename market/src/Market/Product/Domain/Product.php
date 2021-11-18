@@ -1,13 +1,9 @@
 <?php
 
-namespace App\UI\Entity;
+namespace App\Market\Product\Domain;
 
-use App\Market\Product\Domain\Amount;
-use App\Market\Product\Domain\Currency;
-use App\Market\Product\Domain\ProductDescription;
-use App\Market\Product\Domain\ProductName;
-use App\UI\Entity\Traits\TimestampTrait;
-use App\UI\Repository\ProductRepository;
+use App\Market\Category\Domain\Category;
+use App\Market\Shared\Domain\Entity\Traits\TimestampTrait;
 use Doctrine\ORM\Mapping as ORM;
 
 /**

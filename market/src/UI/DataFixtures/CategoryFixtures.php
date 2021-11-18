@@ -2,8 +2,8 @@
 
 namespace App\UI\DataFixtures;
 
+use App\Market\Category\Domain\Category;
 use App\Market\Category\Domain\CategoryName;
-use App\UI\Entity\Category;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 

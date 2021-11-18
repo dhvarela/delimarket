@@ -5,9 +5,9 @@ namespace App\UI\DataFixtures;
 use App\Market\Category\Domain\CategoryRepository;
 use App\Market\Product\Domain\Amount;
 use App\Market\Product\Domain\Currency;
+use App\Market\Product\Domain\Product;
 use App\Market\Product\Domain\ProductDescription;
 use App\Market\Product\Domain\ProductName;
-use App\UI\Entity\Product;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 

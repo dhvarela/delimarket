@@ -2,8 +2,8 @@
 
 namespace App\Market\Category\Infrastructure;
 
+use App\Market\Category\Domain\Category;
 use App\Market\Category\Domain\CategoryRepository;
-use App\UI\Entity\Category;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

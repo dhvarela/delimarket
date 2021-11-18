@@ -2,17 +2,16 @@
 
 namespace App\Market\Product\Infrastructure;
 
+use App\Market\Product\Domain\Product;
 use App\Market\Product\Domain\ProductRepository;
-use App\UI\Entity\Category;
-use App\UI\Entity\Product;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method Category|null find($id, $lockMode = null, $lockVersion = null)
- * @method Category|null findOneBy(array $criteria, array $orderBy = null)
- * @method Category[]    findAll()
- * @method Category[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Product|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Product|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Product[]    findAll()
+ * @method Product[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
 class MySqlProductRepository extends ServiceEntityRepository implements ProductRepository
 {

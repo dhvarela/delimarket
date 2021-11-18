@@ -2,8 +2,6 @@
 
 namespace App\Market\Category\Domain;
 
-use App\UI\Entity\Category;
-
 interface CategoryRepository
 {
     public function search(int $id): ?Category;

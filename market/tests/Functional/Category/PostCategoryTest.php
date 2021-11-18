@@ -2,8 +2,8 @@
 
 namespace App\Tests\Functional\Category;
 
+use App\Market\Category\Domain\Category;
 use App\Market\Category\Domain\CategoryRepository;
-use App\UI\Entity\Category;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\HttpFoundation\Response;
 

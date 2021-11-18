@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Tests\Unit\Category\Product;
+namespace App\Tests\Unit\Product\Application;
 
 use App\Market\Product\Application\ProductFinder;
+use App\Market\Product\Domain\Product;
 use App\Market\Product\Domain\ProductName;
 use App\Market\Product\Domain\ProductNotFound;
 use App\Market\Product\Domain\ProductRepository;
-use App\UI\Entity\Product;
 use Faker\Factory;
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryTestCase;

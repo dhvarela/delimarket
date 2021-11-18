@@ -1,13 +1,12 @@
 <?php
 
-namespace App\UI\Entity;
+namespace App\Market\Category\Domain;
 
-use App\Market\Category\Domain\CategoryName;
-use App\UI\Entity\Traits\TimestampTrait;
-use App\Market\Category\Domain\CategoryRepository;
+use App\Market\Shared\Domain\Entity\Traits\TimestampTrait;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use App\Market\Product\Domain\Product;
 
 /**
  * @ORM\Entity(repositoryClass=CategoryRepository::class)
